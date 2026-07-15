@@ -12,4 +12,6 @@ Este proyecto contiene 3 pruebas automatizadas con Playwright:
 3. Abrir el modal de login.
 
 ## Evidencia
-
+![Screenshot de tests en la terminal](<Reporte de la terminal.png>)
+![Screenshot de test con show-report](reporte.png)
+![Screenshot de tes de la ui](<reporte interfaz de usuario.png>)
