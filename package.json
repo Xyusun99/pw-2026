@@ -1,15 +1,16 @@
 {
   "name": "pw-2026",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "description": "Proyecto QA con Playwright",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug"
+  },
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.1"
-  }
+    "@types/node": "^22.13.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {}
 }
