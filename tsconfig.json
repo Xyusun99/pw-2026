@@ -12,6 +12,6 @@
     "resolveJsonModule": true,
     "noEmit": false
   },
-  "include": ["tests/**/*.ts"],
+  "include": ["tests/**/*.ts", "clase02.spec.ts", "clase03.spec.ts", "clase04.spec.ts", "clase01.spec.ts"],
   "exclude": ["node_modules", "dist", "evidencias"]
 }
