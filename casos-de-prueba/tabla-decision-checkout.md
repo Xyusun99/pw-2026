@@ -30,7 +30,8 @@ Respuesta: aparecen mensajes de error específicos según el campo faltante:
 
 ## Tabla de Decisión (8 reglas)
 
-![Tabla de decisión checkout](../evidencias/clase05/tabla-checkout.png.png)
+![Tabla de decisión checkout](../evidencias/clase05/tabla.png)
+
 
 ---
 
