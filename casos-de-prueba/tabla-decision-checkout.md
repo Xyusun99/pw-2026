@@ -22,15 +22,15 @@ El sistema no permite avanzar si no hay productos en el carrito.
 **Pregunta 3**: ¿El mensaje de error es igual sin importar qué campo falta?
 Respuesta: aparecen mensajes de error específicos según el campo faltante:
 
-    -i falta First Name: "First Name is required"
-    -Si falta Last Name: "Last Name is required"
-    -Si falta Postal Code: "Postal Code is required"
+-Si falta First Name: "First Name is required"
+-Si falta Last Name: "Last Name is required"
+-Si falta Postal Code: "Postal Code is required"
 
-    ---
+---
 
 ## Tabla de Decisión (8 reglas)
 
-![Tabla de decisión checkout](../evidencias/Clase05/tabla-checkout.png.png)
+![Tabla de decisión checkout](../evidencias/clase05/tabla-checkout.png.png)
 
 ---
 
