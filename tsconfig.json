@@ -8,10 +8,11 @@
     "skipLibCheck": true,
     "strict": true,
     "outDir": "./dist",
-    "rootDir": "./tests",
+    
     "resolveJsonModule": true,
     "noEmit": false
   },
-  "include": ["tests/**/*.ts", "clase02.spec.ts", "clase03.spec.ts", "clase04.spec.ts", "clase01.spec.ts"],
+  
+  "include": ["tests/**/*.ts", "pages/**/*.ts"],
   "exclude": ["node_modules", "dist", "evidencias"]
 }
