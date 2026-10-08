@@ -2,33 +2,34 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 30000, // tiempo máximo por test
-  retries: 1,     // reintentar tests fallidos 1 vez
+  timeout: 30000,
+  retries: 1,
+  
+  // Con headless: false, varias ventanas en paralelo causan timeouts
+  workers: 1,
   
   use: {
+    // Se conserva el baseURL de DemoBlaze: las Clases 1-4 lo necesitan
     baseURL: 'https://www.demoblaze.com',
-    headless: false,  // ¡CAMBIO! false para ver el navegador mientras se ejecuta
-    
-
-    // CONFIGURACIÓN DE EVIDENCIAS
-    screenshot: 'on',      // siempre tomar capturas
+    headless: false,
+    screenshot: 'on',
     video: {
-      mode: 'on',          // grabar video de cada test
-      size: { width: 1280, height: 720 }  // tamaño del video
+      mode: 'on',
+      size: { width: 1280, height: 720 }
     },
-    trace: 'on',           // guardar trazas
-    
-    // ¡CONFIGURACIÓN PARA HACER EL VIDEO MÁS LENTO!
+    trace: 'on',
     launchOptions: {
-      slowMo: 500  // 500ms de pausa entre acciones - ¡más fácil de seguir!
+      slowMo: 500
     }
   },
   
+  // Multi-browser: 3 motores + 2 móviles
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+    { name: 'chromium',      use: { ...devices['Desktop Chrome'] } },
+    { name: 'firefox',       use: { ...devices['Desktop Firefox'] } },
+    { name: 'webkit',        use: { ...devices['Desktop Safari'] } },
+    { name: 'mobile-chrome', use: { ...devices['Pixel 5'] } },
+    { name: 'mobile-safari', use: { ...devices['iPhone 12'] } },
   ],
   
   reporter: [

@@ -12,4 +12,6 @@ export async function loginAs(page: Page, username: string) {
   await page.locator('#user-name').fill(username);
   await page.locator('#password').fill(passwords[username] ?? 'secret_sauce');
   await page.locator('#login-button').click();
+  
+  await page.waitForURL(/inventory/, { timeout: 10000 });
 }
